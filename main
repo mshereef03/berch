@@ -1,0 +1,21 @@
+a = eval(input())
+target = eval(input())
+def binarysearch(a,target):
+  print("list=",a)
+  print("target=",target)
+  i = 0
+  j = len(a)-1
+  f = False
+  while i<j:
+    mid = (i+j)//2
+    if a[mid]==target:
+      print("Index: ",mid)
+      f = True
+      break
+    elif target > a[mid]:
+      i = mid + 1
+    else:
+      j = mid - 1
+  if f==False:
+    print("Not in list")
+binarysearch(a,target)
